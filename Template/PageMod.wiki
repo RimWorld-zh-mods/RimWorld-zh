@@ -1,0 +1,190 @@
+<includeonly>{{#invoke:Ddl_Breadcrumb|Breadcrumb}}{{#default_form:PageMod}}
+<!--
+  Head Start
+  -->
+<div class="ddl-section ddl-section-banner">
+<div class="ddl-content-center"><!--
+-->{{#if:{{{封面|}}}|<div class="ddl-item-preview">[[文件:{{{封面|}}}|512px|link=]]</div>}}
+<div class="ddl-item-head"><!--
+-->{{#if:{{{英文名|}}}|<h1 class="ddl-item-head-name">{{{英文名|}}}</h1>}}<!--
+-->{{#if:{{{中文名|}}}|<h1 class="ddl-item-head-name">{{{中文名|}}}</h1>}}
+<!--版本与许可协议-->
+<div class="ddl-item-info-version">
+<span class="ddl-item-info-label"><i class="fa fa-tag" aria-hidden="true"></i> 适配游戏版本：</span>
+<span class="ddl-item-info-detail">{{{适配版本|0.16}}}</span><!--
+-->{{#if:{{{授权许可|}}}|<!--
+----><span class="ddl-separator">&nbsp;{{!}}&nbsp;</span><span class="ddl-item-info-label"><i class="fa fa-balance-scale" aria-hidden="true"></i> 授权许可：</span><!--
+---->{{#arraymap:{{{授权许可|}}}|,|@@@|{{Ddl License|@@@}}|&nbsp;+&nbsp;}}<!--
+-->}}
+</div>
+<!--作者、译者、简介-->
+<table class="ddl-item-info-author">
+<tr class="ddl-item-info-row">
+<td class="ddl-item-info-label">作者：</td>
+<td class="ddl-item-info-detail"><!--
+-->{{#arraymap:{{{作者|}}}|,|@@@<!--
+---->|{{#if:{{#ask:[[类型::~*"作者"*]][[名称::{{#replace:@@@|"|}}]]|?路径|mainlabel=-|headers=hide}}<!--
+------>|[[{{#ask:[[类型::~*"作者"*]][[名称::{{#replace:@@@|"|}}]]|?路径|mainlabel=-|headers=hide}}|{{#replace:@@@|"|}}]]<!--
+------>|{{#replace:@@@|"|}}<!--
+---->}}<!--
+-->|、}}</td>
+</tr>
+<tr class="ddl-item-info-row">
+<td class="ddl-item-info-label">译者：</td>
+<td class="ddl-item-info-detail"><!--
+-->{{#arraymap:{{{译者|}}}|,|@@@<!--
+---->|{{#if:{{#ask:[[类型::~*"译者"*]][[名称::{{#replace:@@@|"|}}]]|?路径|mainlabel=-|headers=hide}}<!--
+------>|[[{{#ask:[[类型::~*"译者"*]][[名称::{{#replace:@@@|"|}}]]|?路径|mainlabel=-|headers=hide}}|{{#replace:@@@|"|}}]]<!--
+------>|{{#replace:@@@|"|}}<!--
+---->}}<!--
+-->|、}}</td>
+</tr>
+</table>
+<table class="ddl-item-info-shoutdesc">
+<tr>
+<td class="ddl-item-info-label">简介：</td>
+<td class="ddl-item-info-detail">{{{简介|}}}</td>
+</tr>
+</table>
+<!--外部链接-->
+<div class="ddl-item-link"><!--
+-->{{{Ex链接|}}}<!--
+-->{{#if:{{{Ludeon原帖|}}}|{{Ddl Button|Url={{{Ludeon原帖|}}}|Text=Ludeon 原帖|Icon=arrow-circle-right|Style=ludeon}}}}<!--
+-->{{#if:{{{源代码|}}}|{{Ddl Button|Url={{{源代码|}}}|Text=GitHub 源代码|Icon=github|Style=github}}}}
+</div>
+</div>
+</div>
+</div><!--Head End-->
+<!--
+  Body Start
+  -->
+<div class="ddl-swimlane-container">
+<!--分类标签-->
+<div class="ddl-tagbar">
+<div class="ddl-content-center ddl-tag-container"><!--
+-->[[:category:RimWorld|RimWorld]][[Category:RimWorld]]<!--
+-->[[:category:Mod|Mod]][[Category:Mod]]<!--
+-->{{#if:{{{标签|}}}|<!--
+---->{{#arraymap:{{{标签|}}}|,|@@@|[[:category:@@@|@@@]][[Category:@@@]]|}}<!--
+-->}}<!--
+-->{{#arraymap:{{{作者|}}}|,|@@@|[[:category:作者 @@@|作者 @@@]][[Category:作者 @@@]]|}}<!--
+-->{{#arraymap:{{{译者|}}}|,|@@@|[[:category:译者 @@@|译者 @@@]][[Category:译者 @@@]]|}}
+</div>
+</div>
+<!--提示内容-->
+<div class="ddl-section">
+<div class="ddl-content-center ddl-note-container"><!--
+-->{{{Ex提示|}}}<!--
+-->{{#switch:{{{翻译进度|}}}<!--
+---->|已内置={{Ddl Note|Style=success|Icon=language|Label=已内置翻译|Text=翻译已内置于原模组，可直接从作者工坊订阅。}}<!--
+---->|内置过旧={{Ddl Note|Style=warning|Icon=language|Label=内置翻译落后|Text=模组内置的翻译版本落后，可从汉化组分流下载点下载最新汉化版。}}<!--
+---->|未内置={{Ddl Note|Style=warning|Icon=language|Label=未内置翻译|Text=翻译未内置于原模组，可从汉化组分流下载点下载最新汉化版。}}<!--
+---->|无文本={{Ddl Note|Style=success|Icon=language|Label=无文本|Text=模组不包含文本，无须翻译，可直接从作者工坊订阅。}}<!--
+-->}}<!--
+-->{{#switch:{{{缺少Keyed|}}}<!--
+---->|是={{Ddl Note|Style=warning|Icon=question|Label=缺少翻译接口|Text=缺少Keyed接口或其他翻译接口，部分文本未翻译。}}<!--
+-->}}<!--
+-->{{#switch:{{{需要新档|}}}<!--
+---->|否={{Ddl Note|Style=success|Icon=history|Label=不需要新建殖民地|Text=兼容已有存档，不需要新建殖民地。}}<!--
+---->|是={{Ddl Note|Style=danger|Icon=history|Label=需要新建殖民地|Text=不兼容已有存档，需要新建殖民地。}}<!--
+---->|需要重启={{Ddl Note|Style=warning|Icon=history|Label=需要重启|Text=兼容已有存档，不需要新建殖民地，但需要重启游戏。}}<!--
+-->}}<!--
+-->{{#switch:{{{可随时删除|}}}<!--
+---->|是={{Ddl Note|Style=success|Icon=trash-o|Label=可随时删除|Text=模组可以随时关闭或删除，不影响已有存档。}}<!--
+-->}}<!--
+-->{{#if:{{{缩写|}}}|{{Ddl Note|Style=info|Icon=font|Label=模组缩写为|Text={{{缩写|}}}}}}}<!--
+-->{{#if:{{{维护说明|}}}|{{Ddl Note|Style=info|Icon=wrench|Label=维护说明|Text={{{维护说明|}}}}}}}<!--
+-->{{#if:{{{需要前置|}}}|<!--
+---->{{Ddl Note|Style=danger|Icon=puzzle-piece|Label=所必需的前置模组|Text=<!--
+------>{{#arraymap:{{{需要前置|}}}|,|@@@|<!--
+-------->{{#if:{{#show:Mod/@@@|?路径}}|[[Mod/@@@|「{{#show:Mod/@@@|?英文名}} - {{#show:Mod/@@@|?中文名}}」]]|[[Mod/@@@|@@@]]<!--
+-------->}}<!--
+------>|、}}<!--
+---->}}<!--
+-->}}<!--
+-->{{#if:{{{排序要求|}}}|{{Ddl Note|Style=danger|Icon=sort-amount-desc|Label=排序要求|Text={{{排序要求|}}}}}}}<!--
+-->{{#switch:{{{测试版|}}}<!--
+---->|是={{Ddl Note|Style=warning|Icon=flask|Label=测试版|Text=此模组暂时是测试版，可能存在 Bug 等不稳定因素。}}<!--
+-->}}<!--
+-->{{#if:{{{兼容性警告|}}}|{{Ddl Note|Style=danger|Icon=bomb|Label=兼容性警告|Text={{{兼容性警告|}}}}}}}
+</div>
+</div>
+<!--订阅与下载-->
+<div class="ddl-section ddl-section-grey">
+<div class="ddl-content-center ddl-download-container">
+<h1>订阅与下载</h1>
+<hr class="ddl-separator-horizontal" />
+<div class="ddl-download-buttons"><!--
+特殊下载
+-->{{{Ex下载|}}}<!--
+原作者下载
+-->{{#if:{{{下载SW|}}}|{{Ddl Button|Style=steam|Url={{{下载SW|}}}|Text=Steam Workshop (原作者)|Icon=steam}}}}<!--
+-->{{#if:{{{下载GR|}}}|{{Ddl Button|Style=github|Url={{{下载GR|}}}|Text=GitHub Release (原作者)|Icon=github}}}}<!--
+-->{{#if:{{{下载DB|}}}|{{Ddl Button|Style=dropbox|Url={{{下载DB|}}}|Text=Dropbox (原作者)|Icon=dropbox}}}}<!--
+-->{{#if:{{{下载NM|}}}|{{Ddl Button|Style=ludeon|Url={{{下载NM|}}}|Text=Nexus Mods (原作者)|Icon=puzzle-piece}}}}<!--
+-->{{#if:{{{下载GD|}}}|{{Ddl Button|Style=google|Url={{{下载GD|}}}|Text=Google Drive (原作者)|Icon=google}}}}<!--
+-->{{#if:{{{下载OD|}}}|{{Ddl Button|Style=onedrive|Url={{{下载GD|}}}|Text=Onedrive (原作者)|Icon=cloud}}}}<!--
+-->{{#if:{{{下载BD|}}}|{{Ddl Button|Style=baidu|Url={{{下载BD|}}}|Text=百度云网盘 (原作者)|Icon=paw}}}}<!--
+-->{{#if:{{{下载1|}}}|{{Ddl Button|Style=success|Url={{{下载1|}}}|Text=下载 1 (原作者)|Icon=download}}}}<!--
+-->{{#if:{{{下载2|}}}|{{Ddl Button|Style=success|Url={{{下载2|}}}|Text=下载 2 (原作者)|Icon=download}}}}<!--
+-->{{#if:{{{下载3|}}}|{{Ddl Button|Style=success|Url={{{下载3|}}}|Text=下载 3 (原作者)|Icon=download}}}}<!--
+汉化组分流
+-->{{#if:{{{分流SW|}}}|{{Ddl Button|Style=steam|Url={{{分流SW|}}}|Text=Steam Workshop (汉化组)|Icon=steam}}}}<!--
+-->{{#if:{{{分流GR|}}}|{{Ddl Button|Style=github|Url={{{分流GR|}}}|Text=GitHub Release (汉化组)|Icon=github}}}}<!--
+-->{{#if:{{{分流DB|}}}|{{Ddl Button|Style=dropbox|Url={{{分流DB|}}}|Text=Dropbox (汉化组)|Icon=dropbox}}}}<!--
+-->{{#if:{{{分流NM|}}}|{{Ddl Button|Style=ludeon|Url={{{分流NM|}}}|Text=Nexus Mods (汉化组)|Icon=puzzle-piece}}}}<!--
+-->{{#if:{{{分流GD|}}}|{{Ddl Button|Style=google|Url={{{分流GD|}}}|Text=Google Drive (汉化组)|Icon=google}}}}<!--
+-->{{#if:{{{分流OD|}}}|{{Ddl Button|Style=onedrive|Url={{{分流GD|}}}|Text=Onedrive (汉化组)|Icon=cloud}}}}<!--
+-->{{#if:{{{分流BD|}}}|{{Ddl Button|Style=baidu|Url={{{分流BD|}}}|Text=百度云网盘 (汉化组)|Icon=paw}}}}<!--
+-->{{#if:{{{分流1|}}}|{{Ddl Button|Style=success|Url={{{分流1|}}}|Text=下载 1 (汉化组)|Icon=download}}}}<!--
+-->{{#if:{{{分流2|}}}|{{Ddl Button|Style=success|Url={{{分流2|}}}|Text=下载 2 (汉化组)|Icon=download}}}}<!--
+-->{{#if:{{{分流3|}}}|{{Ddl Button|Style=success|Url={{{分流3|}}}|Text=下载 3 (汉化组)|Icon=download}}}}<!--
+--><br/>
+</div><!--
+-->{{#if:{{{下载提示|}}}|{{Ddl Note|Style=info|Icon=lightbulb-o|Label=下载提示|Text={{{下载提示|}}}}}}}
+</div>
+</div>
+<!--详细介绍--><!--
+-->{{#if:{{{详细介绍|}}}|
+<div class="ddl-section">
+<div class="ddl-content-center ddl-article-container">
+<h1>详细介绍</h1>
+<hr class="ddl-separator-horizontal" /><br/><br/>
+{{{详细介绍|}}}
+</div>
+</div>}}
+</div><!--Body End-->
+
+<!--
+  页面选项
+  -->
+{{DISPLAYTITLE:{{{中文名|}}} {{{英文名|}}} - {{{作者|}}}}}
+__NOTOC__ 
+__NOREC__
+{{DEFAULTSORT:{{SUBPAGENAME}}}}
+{{#set:
+|更新日期={{{更新日期|}}}
+<!--{{REVISIONYEAR}}-{{REVISIONMONTH}}-{{REVISIONDAY2}}-->
+|类型=Mod
+|路径={{FULLPAGENAME}}
+|封面={{{封面|}}}
+|英文名={{{英文名|}}}
+|中文名={{{中文名|}}}
+|适配版本={{{适配版本|}}}
+|授权许可={{{授权许可|}}}
+|作者={{{作者|}}}
+|译者={{{译者|}}}
+|简介={{{简介|}}}
+|标签={{{标签|}}}
+|Ludeon原帖={{{Ludeon原帖|}}}
+|源代码={{{源代码|}}}
+|翻译进度={{{翻译进度|}}}
+|缺少Keyed={{{缺少Keyed|}}}
+|需要新档={{{需要新档|}}}
+|缩写={{{缩写|}}}
+|维护说明={{{维护说明|}}}
+|需要前置={{{需要前置|}}}
+|排序要求={{{排序要求|}}}
+|测试版={{{测试版|}}}
+|兼容性警告={{{兼容性警告|}}}
+}}{{Ddl PinDonate}}</includeonly><noinclude>{{documentation}}[[Category:Ddl Template]]</noinclude>

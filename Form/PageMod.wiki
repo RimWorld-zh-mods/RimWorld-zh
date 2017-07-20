@@ -1,0 +1,188 @@
+<noinclude>
+{{Ddl Note|Style=info|Icon=info|Label=关于表单“PageMod”
+|Text=这是“PageMod”表单，用于创建与编辑模组页面。与“[[模板:PageMod]]”相对应。要用这个表单创建一个页面，在下面输入页面名称；如果使用这个名称的页面已存在，你将被送到编辑那个页面的表单。
+}}
+
+{{Ddl Note|Style=primary|Icon=file-text|Label=创建或编辑模组页面
+|Text=<br/>
+格式：<br/><code>Mod/[作者名称]/[Mod英文名]</code><br/>
+示例：<br/>
+<code>Mod/eatKenny/Industrialisation</code><br/>
+<code>Mod/eatKenny/Turret_Collection</code><br/>
+<br/>
+'''输入模组页面的相对路径，如果页面不存在则创建，如果存在则编辑'''：{{#forminput:form=PageMod|default value=Mod/}}
+}}
+
+{{Ddl Note|Icon=user|Label=所有作者
+|Text={{#arraymap:{{#ask:[[类型::~*"作者"*]]|?名称|sort=排序|mainlabel=-|headers=hide|link=none}}|,|@@@|@@@|<br/>}}
+}}
+</noinclude><includeonly>{{{info|create title=添加一个Mod页面|edit title=编辑当前Mod页面}}}
+{{#vardefine:spritPseudo
+|{{#arraymap:{{PAGENAME}}|/|@@@|{{#if:@@@|GOOD|BAD}}|_}}
+}}
+{{#ifeq:{{#var:spritPseudo}}|GOOD_GOOD_GOOD
+|<!--路径正确（{{#var:spritPseudo}}）：{{PAGENAME}}。-->
+|{{Ddl Note|Style=danger|Icon=warning|Label=输入的路径错误（{{PAGENAME}}）|Text=相对路径必须符合格式：<br/><code>Mod/[作者名称]/[Mod英文名]</code><br/>示例：<br/><code>Mod/eatKenny/Industrialisation</code><br/><code>Mod/eatKenny/Turret_Collection</code><br/>}}
+}}
+
+<div id="wikiPreview" style="display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;"></div>
+
+{{{for template|PageMod}}}
+
+{{Ddl Note|Style=info|Icon=lightbulb-o|Label=更新日期
+|Text=Mod 的最后更新日期，格式：<code>2017-06-30</code><br/>输入法中输入“rq”可快速获取当前日期。<br/>
+{{{field|更新日期|input type=textarea|rows=1|autogrowth
+|default={{CURRENTYEAR}}-{{CURRENTMONTH}}-{{CURRENTDAY2}}
+}}}
+}}
+
+<br/><br/>
+<!--<span class="text-danger">*</span>-->
+==基本信息==
+<table class="wikitable" style="width:100%;max-width:100%;">
+<tr><th class="text-warning" style="width:160px;">封面</th><td>{{{field|封面|input type=textarea|rows=1|mandatory|default=mod_default_thumbnail.png}}}</td><td>上传图片后输入文件名。[http://rimworldzh.huiji.wiki/wiki/特殊:文件上传 点击上传图片]</td></tr>
+<tr><td colspan="3"></td></tr>
+<tr><th class="text-primary">英文名</th><td>{{{field|英文名|input type=textarea|rows=1|autogrowth|mandatory}}}</td><td>一般情况下，每个单词的首字母大写，并且单词间用空格分隔。</td></tr>
+<tr><th class="text-primary">中文名</th><td>{{{field|中文名|input type=textarea|rows=1|autogrowth|mandatory}}}</td><td></td></tr>
+<tr><td colspan="3"></td></tr>
+<tr>
+<th class="text-info">作者</th>
+<td>{{{field|作者|input type=tokens|placeholder=添加作者|mandatory
+|values={{#arraymap:{{#ask:[[类型::~*"作者"*]]|?名称|sort=排序|mainlabel=-|headers=hide|link=none}}|,|@@@|"@@@"|,}}
+}}}</td>
+<td>每个作者须用<span class="text-danger">英文双引号包裹</span>，并用英文逗号分隔。</td>
+</tr>
+<tr>
+<th class="text-info">译者</th>
+<td>{{{field|译者|input type=tokens|placeholder=添加译者
+|values={{#arraymap:{{#ask:[[类型::~*"译者"*]]|?名称|sort=排序|mainlabel=-|headers=hide|link=none}}|,|@@@|"@@@"|,}}
+}}}</td>
+<td>每个译者须用<span class="text-danger">英文双引号包裹</span>，并用英文逗号分隔。</td>
+</tr>
+<tr><td colspan="3"></td></tr>
+<tr>
+<th style="width:160px;">适配版本</th>
+<td>{{{field|适配版本|input type=combobox|values=0.17,0.16,0.15|default=0.17}}}</td>
+<td></td>
+</tr>
+<tr>
+<th class="text-danger">授权许可</th>
+<td>{{{field|授权许可|input type=tokens|placeholder=添加协议
+|values=CC BY 4.0,CC BY-SA 4.0,CC BY-ND 4.0,CC BY-NC 4.0,CC BY-NC-SA 4.0,CC BY-NC-ND 4.0,MIT,自由软件,模组包、转载、以此模组为基础制作模组时，需要注明原作者并附上原始发布页面的链接。
+}}}</td>
+<td>模组使用的许可协议（License）。</td>
+</tr>
+<tr><td colspan="3"></td></tr>
+<tr>
+<th class="text-success">标签</th>
+<td>{{{field|标签|input type=tokens|placeholder=添加分类标签
+|values={{#invoke:Ddl_GetPropertyValues|GetValues|标签}}
+}}}</td>
+<td>模组的分类标签（关键词），用英文逗号分隔。</td>
+</tr>
+<tr><td colspan="3"></td></tr>
+<tr><th class="text-primary">简介</th><td>{{{field|简介|input type=textarea|rows=3|autogrowth}}}</td><td>此项填写模组的简单介绍，简明扼要、吸引眼球，尽量在一两句话以内。</td></tr>
+</table>
+
+===原始链接===
+<table class="wikitable" style="width:100%;max-width:100%;">
+<tr>
+<th style="width:160px;">Ex链接</th><td>{{{field|Ex链接|input type=textarea|rows=2|autogrowth}}}</td>
+<td>额外链接。多个之间不需要分隔符。<br/>请参考模板：[http://rimworldzh.huiji.wiki/wiki/%E6%A8%A1%E6%9D%BF:Ddl_Button Ddl Button]<br/>示例：<code><nowiki>{{Ddl Button|Style=ludeon|Url=http://www.rimworldgame.com/|Text=RimWorld 官网|Icon=arrow-circle-right}}</nowiki></code></td>
+</tr>
+<tr><td colspan="3"></td></tr>
+<tr><th class="text-danger">Ludeon原帖</th><td>{{{field|Ludeon原帖|input type=textarea|rows=1|autogrowth}}}</td><td>原作者在 Ludeon 论坛上的发布贴（串）的链接。</td></tr>
+<tr><th class="text-danger">源代码</th><td>{{{field|源代码|input type=textarea|rows=1|autogrowth}}}</td><td>在 GitHub 上的源码仓库的链接。</td></tr>
+</table>
+
+<br/><br/>
+
+==提示信息==
+<table class="wikitable" style="width:100%;max-width:100%;">
+<tr><th class="text-danger" style="width:160px;">翻译进度</th><td>{{{field|翻译进度|input type=combobox|values=已内置,内置过旧,未内置,无文本|default=未内置|mandatory}}}</td></tr>
+<tr><th>缺少Keyed</th><td>{{{field|缺少Keyed|input type=combobox|values=是,否}}} 当 dll 类 Mod 未提供 Keyed 导致部分内容无法翻译时，选择“是”。</td></tr>
+<tr><td colspan="3"></td></tr>
+<tr><th class="text-danger">需要新档</th><td>{{{field|需要新档|input type=combobox|values=是,否|default=否}}} 是否需要新建殖民地，默认为“否”。</td></tr>
+<tr><th>可随时删除</th><td>{{{field|可随时删除|input type=combobox|values=是,否|default=否}}} 中途关 Mod 是否不会影响存档，默认为“否”。</td></tr>
+<tr><td colspan="3"></td></tr>
+<tr><th>缩写</th><td>{{{field|缩写|input type=textarea|rows=1|autogrowth|placeholder=仅当模组规模较大，且在所有研究项目标题中标注了缩写前缀时才填写此项。}}}</td></tr>
+<tr><td colspan="3"></td></tr>
+<tr><th>维护说明</th><td>{{{field|维护说明|input type=textarea|rows=2|autogrowth|placeholder=如果原作者弃坑并由他人接手维护，或由汉化组成员代为发布工坊的。}}}</td></tr>
+<tr><td colspan="3"></td></tr>
+<tr>
+<th>需要前置</th>
+<td>{{{field|需要前置|input type=tokens|placeholder=添加必要的前置模组
+|values={{#invoke:Ddl_GetPropertyValues|GetValues|需要前置}}
+}}}<br/>格式为相对路径<code><tt><nowiki>[作者]/[模组]</nowiki></tt></code>，多个时用英文逗号分隔。</td>
+</tr>
+<tr><th>排序要求</th><td>{{{field|排序要求|input type=textarea|rows=2|autogrowth|placeholder=无特殊要求时不写。}}}</td></tr>
+<tr><th>测试版</th><td>{{{field|测试版|input type=combobox|values=是,否|default=否}}}</td></tr>
+<tr><th>兼容性警告</th><td>{{{field|兼容性警告|input type=textarea|rows=2|autogrowth|placeholder=与哪些 Mod 冲突。}}}</td></tr>
+<tr><td colspan="3"></td></tr>
+<tr>
+<th>Ex提示</th>
+<td>{{{field|Ex提示|input type=textarea|rows=2|autogrowth}}}<br/>额外提示。多个之间不需要分隔符。<br/>请参考模板：[http://rimworldzh.huiji.wiki/wiki/%E6%A8%A1%E6%9D%BF:Ddl_Note Ddl Note]<br/>示例：<code><tt><nowiki>{{Ddl Note|Style=warning|Icon=question|Label=人名翻译缺少接口|Text=官方只提供了背景故事翻译的接口，人名无法通过正常途径翻译。}}</nowiki></tt></code></td>
+</tr>
+</table>
+
+<br/><br/>
+
+==订阅与下载==
+<br/>
+{{Ddl Note|Style=info|Icon=lightbulb-o|Label=下载提示
+|Text=填写一些提示信息，比如百度云网盘的提取密码。<br/>
+{{{field|下载提示|input type=textarea|rows=2|autogrowth}}}
+}}
+<div class="row">
+<div class="col-md-6">
+<table class="wikitable" style="width:100%;max-width:100%;display:inline-block;">
+<tr><th>作者下载</th></tr>
+<tr><td class="text-danger">'''下载SW'''：Steam Workshop<br/>{{{field|下载SW|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td class="text-danger">'''下载GR'''：GitHub Release<br/>{{{field|下载GR|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td>'''下载DB'''：Dropbox<br/>{{{field|下载DB|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td>'''下载NM'''：Nexus Mods<br/>{{{field|下载NM|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td>'''下载GD'''：Google Drive<br/>{{{field|下载GD|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td>'''下载OD'''：OneDrive<br/>{{{field|下载OD|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td>'''下载BD'''：百度云网盘<br/>{{{field|下载BD|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td></td></tr>
+<tr><td>'''下载1'''：其他下载 1<br/>{{{field|下载1|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td>'''下载2'''：其他下载 2<br/>{{{field|下载2|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td>'''下载3'''：其他下载 3<br/>{{{field|下载3|input type=textarea|rows=1|autogrowth}}}</td></tr>
+</table>
+</div>
+<div class="col-md-6">
+<table class="wikitable" style="width:100%;max-width:100%;display:inline-block;">
+<tr><th>汉化组分流</th></tr>
+<tr><td>'''分流SW'''：Steam Workshop<br/>{{{field|分流SW|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td>'''分流GR'''：GitHub Release<br/>{{{field|分流GR|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td>'''分流DB'''：Dropbox<br/>{{{field|分流DB|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td>'''分流NM'''：Nexus Mods<br/>{{{field|分流NM|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td>'''分流GD'''：Google Drive<br/>{{{field|分流GD|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td>'''分流OD'''：OneDrive<br/>{{{field|分流OD|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td class="text-danger">'''分流BD'''：百度云网盘<br/>{{{field|分流BD|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td></td></tr>
+<tr><td>'''分流1'''：其他分流 1<br/>{{{field|分流1|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td>'''分流2'''：其他分流 2<br/>{{{field|分流2|input type=textarea|rows=1|autogrowth}}}</td></tr>
+<tr><td>'''分流3'''：其他分流 3<br/>{{{field|分流3|input type=textarea|rows=1|autogrowth}}}</td></tr>
+</table>
+</div>
+</div>
+{{Ddl Note|Style=default|Icon=download|Label=Ex下载
+|Text=额外下载链接。多个之间不需要分隔符。<br/>
+请参考模板：[http://rimworldzh.huiji.wiki/wiki/%E6%A8%A1%E6%9D%BF:Ddl_Button Ddl Button]<br/>
+示例：<code><nowiki>{{Ddl Button|Url=https://coding.net/u/duduluu/p/RimWorld-ChineseSimplified/git/tags|Text=Coding 下载|Icon=download|Style=success}}</nowiki></code><br/><br/>
+{{{field|Ex下载|input type=textarea|rows=2|autogrowth}}}
+}}
+
+<br/><br/>
+
+==详细介绍==
+{{Ddl Note|Icon=align-left|Label=详细介绍
+|Text=模组的详细介绍。<br/>
+请参考：[http://www.huiji.wiki/wiki/帮助:编辑页面 帮助:编辑页面]，[http://rimworldzh.huiji.wiki/wiki/分类:Ddl_Template 分类:Ddl Template]，以及其他页面的源代码。[http://rimworldzh.huiji.wiki/wiki/特殊:文件上传 点击上传图片]
+}}
+{{{field|详细介绍|input type=textarea|rows=30|autogrowth}}}
+
+{{{end template}}}
+__NOTOC__
+</includeonly>
