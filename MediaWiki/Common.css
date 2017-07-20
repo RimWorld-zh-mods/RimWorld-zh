@@ -1,0 +1,1136 @@
+/* 这里放置的CSS将应用于所有皮肤 */
+
+
+/*.huiji-css-hook {
+    background-image: url(http://huiji-public.huijistatic.com/rimworldzh/uploads/3/35/Background_blackhead.png);
+    background-attachment: fixed;
+    background-position: top;
+    background-size: 4000px 146px;
+    background-repeat: no-repeat;
+}*/
+
+
+/*Overwrite*/
+
+
+/*body {
+    font-family: "wf_segoe-ui_normal", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", "Microsoft YaHei", "微软雅黑", "sans-serif";
+    text-rendering: optimizeLegibility;
+}*/
+
+code {
+    font-family: monospace, 'Courier';
+    color: #404040;
+    background-color: #f4f3fd;
+    border: 1px solid #e4e2fa;
+    border-radius: 2px;
+}
+
+code:hover {
+    background-color: #e4e2fa;
+    border-color: #cfcaf6;
+}
+
+
+/*#wiki-body {
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.wiki-body-section {
+    padding-left: 0;
+    padding-right: 0;
+}*/
+
+.ddl-page-header {
+    display: none;
+}
+
+
+/*#firstHeading {
+    display: none;
+}*/
+
+.rootpage-Home #firstHeading,
+.rootpage-About #firstHeading,
+.rootpage-Mod #firstHeading,
+.rootpage-Translator #firstHeading {
+    display: none;
+}
+
+.action-edit #firstHeading,
+.action-formedit #firstHeading,
+.action-history #firstHeading,
+.action-purge #firstHeading {
+    display: block;
+}
+
+.rootpage-Home .category-links,
+.rootpage-About .category-links,
+.rootpage-Mod .category-links,
+.rootpage-Translator .category-links {
+    display: none;
+}
+
+
+/*Footer*/
+
+.bottom footer {
+    z-index: 98;
+}
+
+.ddl-footer {
+    vertical-align: top;
+}
+
+.ddl-footer-col {
+    vertical-align: top;
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+.ddl-footer a {
+    color: inherit;
+}
+
+.ddl-footer a:hover {
+    color: #8c9eff;
+}
+
+
+/*.quiet a {
+    color: inherit;
+}*/
+
+.quiet a:hover {
+    color: #8c9eff;
+}
+
+
+/*Navigation Bar*/
+
+
+/*duduluu CSS*/
+
+
+/*Button*/
+
+.ddl-button {
+    display: inline-block;
+    margin-left: 0px!important;
+    margin-right: 10px!important;
+    margin-top: 4px!important;
+    margin-bottom: 4px!important;
+}
+
+.ddl-button-icon-right {
+    margin-left: 16px;
+}
+
+.ddl-button a,
+.ddl-button .selflink {
+    font-size: 14px;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    background-color: #3f51b5;
+    min-width: 150px;
+    padding: 8px 16px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    margin: 0px;
+    position: relative;
+    -webkit-transition: .2s;
+    transition: .2s;
+    box-shadow: inset 0px -3px rgba(0, 0, 0, .2);
+}
+
+.ddl-button a:hover,
+.ddl-button .selflink:hover {
+    box-shadow: inset 0 -3px rgba(0, 0, 0, .25);
+}
+
+.ddl-button-default a,
+.ddl-button-default .selflink {
+    background-color: #5a5a5a;
+}
+
+.ddl-button-primary a,
+.ddl-button-primary .selflink {
+    background-color: #0e77ca;
+}
+
+.ddl-button-success a,
+.ddl-button-success .selflink {
+    background-color: #00924c;
+}
+
+.ddl-button-info a,
+.ddl-button-info .selflink {
+    background-color: #008997;
+}
+
+.ddl-button-warning a,
+.ddl-button-warning .selflink {
+    background-color: #e09a00;
+}
+
+.ddl-button-danger a,
+.ddl-button-danger .selflink {
+    background-color: #d73435;
+}
+
+.ddl-button-about a,
+.ddl-button-about .selflink {
+    background-color: #108ee9;
+}
+
+.ddl-button-heart a,
+.ddl-button-heart .selflink {
+    background-color: #f5317f;
+}
+
+.ddl-button-outlook a,
+.ddl-button-outlook .selflink {
+    background-color: #0078d7;
+}
+
+.ddl-button-ludeon a,
+.ddl-button-ludeon .selflink {
+    background-color: #f7941e;
+}
+
+.ddl-button-steam a,
+.ddl-button-steam .selflink {
+    background-color: #407999;
+}
+
+.ddl-button-github a,
+.ddl-button-github .selflink {
+    background-color: #8b2996;
+}
+
+.ddl-button-dropbox a,
+.ddl-button-dropbox .selflink {
+    background-color: #007ee5;
+}
+
+.ddl-button-google a,
+.ddl-button-google .selflink {
+    background-color: #ea4335;
+}
+
+.ddl-button-onedrive a,
+.ddl-button-onedrive .selflink {
+    background-color: #094ab2;
+}
+
+.ddl-button-baidu a,
+.ddl-button-baidu .selflink {
+    background-color: #3888ff;
+}
+
+.ddl-button-yandex a,
+.ddl-button-yandex .selflink {
+    background-color: #fee133;
+}
+
+.ddl-button-bilibili a,
+.ddl-button-bilibili .selflink {
+    background-color: #f25d8e;
+}
+
+
+/*Note*/
+
+.ddl-note {
+    overflow: hidden;
+    font-size: 14px;
+    text-align: left;
+    background-color: #fbfbfb;
+    padding: 10px 15px 10px 32px;
+    border-left-width: 6px;
+    border-left-style: solid;
+    border-color: #919191;
+    margin-bottom: 20px;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.ddl-note:hover {
+    background-color: #f7f7f7;
+}
+
+.ddl-note-primary {
+    background-color: #ecf6fd;
+    border-color: #0e77ca;
+}
+
+.ddl-note-primary:hover {
+    background-color: #d2eafb;
+}
+
+.ddl-note-success {
+    background-color: #ebf8f2;
+    border-color: #00924c;
+}
+
+.ddl-note-success:hover {
+    background-color: #cfefdf;
+}
+
+.ddl-note-info {
+    background-color: #ebf8f9;
+    border-color: #008997;
+}
+
+.ddl-note-info:hover {
+    background-color: #cfedf0;
+}
+
+.ddl-note-warning {
+    background-color: #fffaeb;
+    border-color: #e09a00;
+}
+
+.ddl-note-warning:hover {
+    background-color: #fff3cf;
+}
+
+.ddl-note-danger {
+    background-color: #fef0ef;
+    border-color: #d73435;
+}
+
+.ddl-note-danger:hover {
+    background-color: #fcdbd9;
+}
+
+.ddl-note p {
+    line-height: 1.6!important;
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+    padding-left: 0!important;
+    padding-right: 0!important;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+
+.ddl-note strong {
+    font-weight: 450;
+}
+
+.ddl-note+.ddl-note {
+    margin-top: -16px;
+}
+
+.ddl-note:before {
+    /*content: "\f05a";*/
+    /*-webkit-transform: scaleY(.8) scaleX(.8);
+    -ms-transform: scaleY(.8) scaleX(.8);
+    transform: scaleY(.8) scaleX(.8);*/
+    display: inline-block;
+    width: 32px;
+    float: left;
+    margin: 0 0 0 -32px;
+    font-family: FontAwesome;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    text-rendering: auto;
+    line-height: 1.2em !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/*List Link*/
+
+.ddl-list-link {
+    margin-bottom: 4em;
+}
+
+.ddl-list-link a {
+    display: block;
+    font-size: 16px;
+    text-align: left;
+    color: inherit;
+    background-color: #e8eaf6;
+    padding: 10px 15px 10px 20px;
+    border-left-width: 5px;
+    border-left-style: solid;
+    border-color: #c5cae9;
+    border-left-width: 5px;
+    border-left-style: solid;
+    margin-bottom: 1px;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.ddl-list-link a:hover {
+    background-color: #c5cae9;
+    border-color: #3f51b5;
+}
+
+
+/*Content Panel*/
+
+.ddl-separator {
+    font-size: 15px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.ddl-separator-horizontal {
+    margin: 2rem 0;
+    border-top: 1px solid #d9d9d9;
+}
+
+.ddl-section {
+    /*width: 100%;*/
+    /*min-width: 540px;*/
+    padding: 6rem 1500px;
+    margin: 0 -1500px;
+    background-color: #fff;
+}
+
+.ddl-section-grey {
+    background-color: #f5f5f5;
+}
+
+.ddl-section-banner {
+    min-height: 30rem;
+    background-color: #eff1f3;
+}
+
+.ddl-content-center {
+    /*max-width: 1400px;*/
+    /*padding: 0 4rem;*/
+    margin: 0 auto;
+}
+
+.ddl-swimlane-container {
+    width: 100%;
+    /*min-width: 300px;*/
+}
+
+.ddl-swimlane-container h1,
+.ddl-swimlane-container h2,
+.ddl-swimlane-container h3,
+.ddl-swimlane-container h4,
+.ddl-swimlane-container h5,
+.ddl-swimlane-container h6 {
+    font-weight: 500;
+}
+
+
+/*Home*/
+
+.ddl-home {
+    color: #fff;
+    text-align: center;
+    /*height: 512px;*/
+    background-color: #3f51b5;
+    overflow: hidden;
+}
+
+
+/*.ddl-home-title {
+    transform: translateY(-50%);
+    top: 45%;
+}*/
+
+.ddl-home h1,
+.ddl-home strong {
+    display: block;
+    /*font-size: 3rem!important;*/
+}
+
+
+/*.ddl-home p {
+    padding: 0;
+    margin: 0;
+}*/
+
+.ddl-lead {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+.ddl-cover-home,
+.ddl-cover-duduluu,
+.ddl-cover-biscuit,
+.ddl-cover-about {
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    padding-bottom: 100%;
+    /*padding-bottom: 61.803399%;*/
+    width: 100%;
+    /*margin-top: 30px;
+    margin-bottom: 30px;*/
+}
+
+.ddl-cover-duduluu {
+    background-image: url("http://huiji-public.huijistatic.com/rimworldzh/uploads/e/ec/Duduluu_large.png");
+}
+
+.ddl-cover-biscuit {
+    background-image: url("http://huiji-public.huijistatic.com/rimworldzh/uploads/4/46/Biscuit_large.png");
+}
+
+.ddl-cover-about {
+    background-image: url("http://huiji-public.huijistatic.com/rimworldzh/uploads/d/d3/Cover_about.png");
+}
+
+
+/*
+@media (max-width: 991px) {
+    .ddl-home .ddl-duduluu {
+        max-width: 512px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .ddl-home .ddl-duduluu {
+        background-size: 512px auto;
+        padding-bottom: 61.803399%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .ddl-home .ddl-duduluu {
+        background-size: 512px auto;
+        padding-bottom: 61.803399%;
+    }
+}*/
+
+.ddl-lead {
+    padding: 10px 0;
+}
+
+.ddl-home-buttons {
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.ddl-home-about,
+.ddl-home-donate {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.ddl-home-about a,
+.ddl-home-donate a {
+    padding: 8px 32px;
+}
+
+.ddl-home-about a,
+.ddl-home-donate a {
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.ddl-home-about a:hover {
+    color: #fff;
+    background-color: #108ee9;
+    /*border-color: #108ee9;*/
+}
+
+.ddl-home-donate a:hover {
+    color: #fff;
+    background-color: #f5317f;
+    /*border-color: #f5317f;*/
+}
+
+.ddl-home-jumps {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 2rem;
+    text-align: center;
+    background-color: #fbfbfb;
+}
+
+.ddl-home-jumps i {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    margin: auto auto 0.5rem;
+}
+
+.ddl-home-jumps a {
+    padding: 2rem 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0.5;
+    color: inherit;
+}
+
+.ddl-home-jumps a:hover {
+    background-color: #d9d9d9;
+    opacity: 1;
+}
+
+.ddl-home-jumps-indigo a:hover i {
+    color: #3f51b5;
+}
+
+.ddl-home-jumps-green a:hover i {
+    color: #00924c;
+}
+
+.ddl-home-jumps-blue a:hover i {
+    color: #0e77ca;
+}
+
+.ddl-home-jumps-pink a:hover i {
+    color: #dc277d;
+}
+
+.ddl-ilustri {
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    padding-bottom: 61.803399%;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.ddl-ilustri-vallina {
+    background-image: url("http://huiji-public.huijistatic.com/rimworldzh/uploads/c/cb/Ilustri_vallina.svg");
+}
+
+.ddl-ilustri-mod {
+    background-image: url("http://huiji-public.huijistatic.com/rimworldzh/uploads/0/0c/Ilustri_mod.svg");
+}
+
+
+/*Works*/
+
+.ddl-color-stick {
+    display: inline-block;
+    height: 8px;
+    width: 80px;
+    background-color: #3f51b5;
+}
+
+.ddl-works-category {
+    padding-top: 0!important;
+    margin-top: 1rem !important;
+}
+
+.ddl-works-wrappr,
+.ddl-works-wrapper {
+    display: table;
+    width: 100%;
+    min-width: 300px;
+    /*max-width: 1080px;*/
+    min-height: 264px;
+    /*padding-left: 4rem;*/
+    margin: 4rem auto;
+}
+
+
+/*Breadcrumb*/
+
+.ddl-breadcrumb {
+    background-color: #232323;
+    min-height: 45px;
+    /*width: 100%;*/
+    line-height: 45px;
+    padding: 0 1500px;
+    margin: 0 -1500px;
+}
+
+.ddl-breadcrumb-container {
+    color: #fff;
+    min-height: 45px;
+    font-size: 13px;
+    line-height: 45px;
+    margin: 0 auto;
+}
+
+.ddl-breadcrumb-container a {
+    color: #fff;
+    font-size: 13px;
+    line-height: 45px;
+}
+
+.ddl-breadcrumb-container a:hover {
+    color: #fff;
+}
+
+
+/*Author Card*/
+
+.ddl-author-card {
+    display: inline-block;
+    float: left;
+    position: relative;
+    width: 316px;
+    height: 96px;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 2px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    margin: 0px 16px 24px 0;
+}
+
+.ddl-author-card:hover {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+}
+
+.ddl-author-card-avatar {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    *display: block;
+    *font-size: 84px;
+    width: 96px;
+    height: 96px;
+    overflow: hidden;
+}
+
+.ddl-author-card-name {
+    display: inline-block;
+    overflow: hidden;
+    width: 200px;
+    vertical-align: top;
+}
+
+.ddl-author-card-name a {
+    display: block;
+    color: inherit;
+    font-size: 18px;
+    width: 500px;
+    height: 96px;
+    padding: 12px 16px;
+}
+
+.ddl-author-card-nick {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.ddl-author-card-count {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    text-align: right;
+    opacity: 0.6;
+}
+
+
+/*Author Info*/
+
+.ddl-author-container {
+    text-align: center;
+}
+
+.ddl-author-container>img {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, .2);
+    margin-bottom: 30px;
+}
+
+.ddl-author-container>img:hover {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, .3);
+    margin-bottom: 30px;
+}
+
+.ddl-author-avatar {
+    display: inline-block;
+    overflow: hidden;
+    width: 160px;
+    height: 160px;
+    background-color: #fff;
+    border-radius: 16px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    -webkit-transition: .2s;
+    transition: .2s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, .2);
+}
+
+.ddl-author-avatar:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, .3);
+}
+
+.ddl-author-avatar img {
+    width: 160px;
+    height: 160px;
+}
+
+.ddl-author-avatar i {
+    opacity: 0.7;
+    width: 160px;
+    height: 160px;
+    line-height: 160px;
+}
+
+.ddl-author-name {
+    display: block!important;
+    font-size: 3.8em !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ddl-author-nick {
+    display: block!important;
+    font-size: 2.6em !important;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+.ddl-author-shortdesc {
+    margin-top: 10px!important;
+    opacity: 0.8;
+}
+
+.ddl-author-location {
+    display: inline-block;
+    opacity: 0.8;
+    min-width: 200px;
+    padding: 20px 32px;
+    margin: 20px 0;
+}
+
+.ddl-author-location i {
+    opacity: 0.6;
+    margin-right: 0.8rem;
+}
+
+.ddl-author-location img {
+    margin-left: 0.8rem;
+}
+
+.ddl-author-link {
+    margin-top: 20px;
+}
+
+.ddl-author-link .ddl-button {
+    margin-left: 10px!important;
+    margin-right: 10px!important;
+}
+
+
+/*Item Card*/
+
+.ddl-item-card-holder {
+    display: inline-block;
+    float: left;
+    vertical-align: top;
+    position: relative;
+    background-color: transparent;
+    height: 300px;
+    padding-top: 16px;
+    padding-left: 12px;
+    padding-right: 12px;
+    /*margin-bottom: 16px;*/
+}
+
+.ddl-item-card-holder:before {
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    left: -0px;
+    right: -0px;
+    content: "";
+    height: 6rem;
+    background-color: #c5cae9;
+    opacity: 0.4;
+}
+
+.ddl-item-card {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    width: 240px;
+    background-color: #fff;
+    border-radius: 2px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.ddl-item-card:hover {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+}
+
+.ddl-item-card-preview {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 240px;
+    height: 148px;
+    overflow: hidden;
+    background-color: #15191d;
+}
+
+.ddl-item-card-preview a {
+    color: #5c6bc0;
+}
+
+.ddl-item-card-preview img {
+    vertical-align: middle;
+    max-height: 148px;
+    overflow: hidden;
+}
+
+.ddl-item-card-link {
+    font-size: 15px;
+    line-height: 2.2rem;
+}
+
+.ddl-item-card-link a {
+    display: block;
+    color: #404040;
+    width: 240px;
+    min-height: 88px;
+    padding: 12px;
+}
+
+.ddl-item-card-indicium {
+    z-index: 10;
+    position: absolute;
+    top: 32px;
+    right: 8px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.ddl-item-card-indicium i {
+    margin-right: 8px;
+}
+
+.ddl-item-card-indicium-intrans,
+.ddl-item-card-indicium-newsave,
+.ddl-item-card-indicium-latest {
+    padding: 3px 10px;
+    margin-bottom: 4px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: inset 0 -1px rgba(0, 0, 0, .2);
+}
+
+.ddl-item-card-indicium-latest {
+    background-color: #108ee9;
+}
+
+.ddl-item-card-indicium-intrans {
+    background-color: #00a854;
+}
+
+.ddl-item-card-indicium-newsave {
+    background-color: #f04134;
+}
+
+
+/*Item Info*/
+
+.ddl-item-preview {
+    /*display: inline-block;*/
+    vertical-align: top;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d9d9d9;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.ddl-item-preview img {
+    background-color: #15191d;
+}
+
+.ddl-item-head {
+    /*display: inline-block;*/
+    vertical-align: top;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ddl-item-head-name {
+    display: block!important;
+    width: 100%;
+    font-size: 2.4em!important;
+    font-weight: 600;
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+    line-height: 1.0em!important;
+    margin-top: 0!important;
+    margin-bottom: 0px!important;
+}
+
+.ddl-item-head-name+.ddl-item-head-name {
+    font-size: 2.0em!important;
+    margin-top: 10px!important;
+}
+
+.ddl-item-info-row {
+    width: 100%;
+}
+
+.ddl-item-info-label {
+    vertical-align: top;
+    width: 50px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.ddl-item-info-detail {
+    font-size: 15px;
+}
+
+.ddl-item-info-version {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.ddl-item-info-author {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.ddl-item-info-shoutdesc {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.ddl-item-link {
+    margin-top: 32px;
+}
+
+
+/*Tag Section*/
+
+.ddl-tagbar {
+    background-color: #fff;
+    min-height: 45px;
+    padding: 0 1500px;
+    margin: 0 -1500px;
+}
+
+.ddl-tagbar a {
+    font-size: 12px;
+    display: inline-block;
+    color: #5a5a5a;
+    text-align: center;
+    text-decoration: none;
+    background-color: transparent;
+    padding: 3px 10px 2px 10px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    margin: 2px 8px 2px 0px;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.ddl-tagbar a:hover {
+    color: #fff;
+    background-color: #3f51b5;
+    border-color: #3f51b5;
+}
+
+.ddl-tag-container {
+    padding: 10px 0;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+
+/*Note Section*/
+
+.ddl-note-container {
+    /*padding: 0 4rem;*/
+}
+
+
+/*Download Section*/
+
+.ddl-download-container {
+    margin-bottom: 20px;
+}
+
+.ddl-download-container h1 {
+    display: block!important;
+    text-align: center;
+}
+
+.ddl-download-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ddl-download-buttons .ddl-button {
+    margin-left: 10px!important;
+    margin-right: 10px!important;
+}
+
+
+/*Article Section*/
+
+.ddl-article-container {
+    margin-bottom: 20px;
+}
+
+.ddl-article-container h1 {
+    display: block!important;
+    text-align: center;
+}
+
+
+/*Pin Donate*/
+
+.ddl-pin-donate {
+    background: url(http://huiji-public.huijistatic.com/rimworldzh/uploads/0/0f/Pin_donate_background.png) 0px 0px no-repeat;
+    background-size: 600px 200px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: block;
+    position: fixed;
+    left: -50px;
+    bottom: 0px;
+    z-index: 90;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+.ddl-pin-donate a {
+    display: block;
+    width: 125px;
+    height: 165px;
+    margin-top: 35px;
+    margin-left: 65px;
+}
+
+@media(min-width:786px) {
+    .ddl-pin-donate:hover {
+        width: 600px;
+    }
+}
+
+@media(max-width:786px) {
+    .ddl-pin-donate {
+        position: relative;
+        width: 600px;
+    }
+}
