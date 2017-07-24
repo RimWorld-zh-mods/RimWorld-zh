@@ -1,7 +1,7 @@
 local Utility = {}
 
 -- 列出对应作者和版本的所有Mod的连接
-function modLink(authorName, version)
+function modLinks(authorName, version)
     if authorName == nil or authorName == '' then
         return ''
     end
@@ -37,7 +37,7 @@ function modLink(authorName, version)
     -- return mw.text.jsonEncode({ authorName = authorName, version = version, queryResult = queryResult })
 end
 
--- 列出所有作者的对应版本的Mod的连接
+-- 列出所有作者的对应版本的Mod的链接（目录样式）
 function Utility.modIndex(frame)
     local version = frame and frame.args[1] or '0.17'
 
@@ -55,7 +55,7 @@ function Utility.modIndex(frame)
         local count = 0
         for i, author in pairs(queryResult) do
             count = i
-            text = text .. modLink(author['名称'], version)
+            text = text .. modLinks(author['名称'], version)
         end
         if count > 0 then
             return text
