@@ -1,5 +1,6 @@
 local Utility = {}
 
+-- 列出对应作者和版本的所有Mod的连接
 function modLink(authorName, version)
     if authorName == nil or authorName == '' then
         return ''
@@ -36,6 +37,7 @@ function modLink(authorName, version)
     -- return mw.text.jsonEncode({ authorName = authorName, version = version, queryResult = queryResult })
 end
 
+-- 列出所有作者的对应版本的Mod的连接
 function Utility.modIndex(frame)
     local version = frame and frame.args[1] or '0.17'
 
