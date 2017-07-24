@@ -1,0 +1,46 @@
+<includeonly>{{#invoke:Ddl_Breadcrumb|Breadcrumb}}{{#default_form:PageAuthor}}
+<div class="ddl-section ddl-section-banner">
+<div class="ddl-content-center ddl-author-container"><!--
+-->{{#if:{{{Ex头像|}}}<!--
+---->|[[文件:{{{Ex头像|}}}|link=user:{{{灰机ID|{{{名称|}}}}}}]]<!--
+---->|<div class="ddl-author-avatar"><!--
+------>{{#if:{{{头像|}}}<!--
+-------->|[[文件:{{{头像|}}}|160px|link=user:{{{灰机ID|{{{名称|}}}}}}]]<!--
+-------->|<i class="fa fa-user fa-5x" aria-hidden="true"></i><!--
+------>}}<!--
+----></div><!--
+-->}}
+<h1 class="ddl-author-name">{{{名称|}}}</h1><!--
+-->{{#if:{{{昵称|}}}|<h1 class="ddl-author-nick">{{{昵称|}}}</h1>}}<!--
+--><p class="ddl-author-shortdesc">{{{简介|&nbsp; }}}</p><!--
+-->{{#if:{{{地区|}}}|<div class="ddl-author-location"><i class="fa fa-map-marker" aria-hidden="true"></i>{{{地区|}}}{{#if:{{{国旗|}}}|[[file:{{{国旗|}}}.png|30px|link=]]}}</div>}}
+<div class="ddl-author-link"><!--
+-->{{{Ex链接|}}}<!--
+-->{{#if:{{{Workshop|}}}|{{Ddl Button|Url={{{Workshop|}}}|Text=Steam Workshop|Icon=steam|Style=steam}}}}<!--
+-->{{#if:{{{GitHub|}}}|{{Ddl Button|Url={{{GitHub|}}}|Text=GitHub|Icon=github|Style=github}}}}
+</div>
+</div>
+</div><!--
+-->{{#arraymap:{{{身份|}}}|,|@@@|<!--
+---->{{#switch:@@@<!--
+------>|"作者"={{ModWrapper|作者|{{{名称|}}}}}<!--
+------>|"译者"={{ModWrapper|译者|{{{名称|}}}}}<!--
+---->}}<!--
+-->|}}<!--
+-->{{#arraymap:{{{身份|}}}|,|@@@|[[Category:@@@]]|}}<!--
+-->{{DISPLAYTITLE:{{{名称|}}}}}<!--
+-->__NOTOC__<!--
+-->__NOREC__<!--
+-->{{DEFAULTSORT:{{{名称|}}}}}<!--
+-->{{#set:
+|类型={{{身份|}}}
+|路径={{#replace:{{FULLPAGENAME}}| |_}}
+|头像={{{头像|}}}
+|名称={{{名称|}}}
+|排序={{lc:{{{名称|}}}}}
+|昵称={{{昵称|}}}
+|简介={{{简介|}}}
+|身份={{{身份|}}}
+|Workshop={{{Workshop|}}}
+|GitHub={{{GitHub|}}}
+}}</includeonly><noinclude>{{documentation}}[[Category:Ddl Template]]</noinclude>
