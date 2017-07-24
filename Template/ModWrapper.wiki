@@ -1,0 +1,11 @@
+<includeonly><div class="ddl-section ddl-section-grey">
+<div class="ddl-content-center ddl-article-container">
+<div class="ddl-color-stick"></div>
+<h2 class="ddl-works-category">{{#switch:{{{1|更新日期}}}|作者=Mod 作品|译者=翻译作品|更新日期=最近更新的 Mod}}</h2>
+{{#switch:{{{1|更新日期}}}|更新日期={{Ddl ButtonInner|Url=Mod/All_Mod|Text=检索所有 Mod|Icon=list}}{{Ddl Button|Url=https://tieba.baidu.com/p/5143356153|Text=贴吧汇总贴|Icon=list}}}}
+<div class="ddl-works-wrapper">
+{{#invoke:Utility|modWrapper|{{{1|}}}|{{{2|}}}}}
+</div>
+</div>
+</div>
+</includeonly><noinclude>{{documentation}}[[Category:Ddl Template]]</noinclude>
