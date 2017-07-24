@@ -1,0 +1,16 @@
+<includeonly>{{#invoke:Ddl_Breadcrumb|Breadcrumb}}
+<div class="ddl-section">
+<div class="ddl-content-center ddl-article-container">
+<h1>所有 Mod</h1>
+<hr class="ddl-separator-horizontal" />
+<div class="ddl-download-buttons">
+{{Ddl ButtonInner|Url=Mod/All_Mod|Text=A17}}{{Ddl ButtonInner|Url=Mod/All_Mod/A16|Text=A16}}
+</div>
+{{#invoke:Utility|modIndex|{{{1|0.17}}}}}
+</div>
+</div>
+{{Ddl PinDonate}}
+{{DISPLAYTITLE:所有 Mod}}
+__NOTOC__ 
+__NOREC__
+</includeonly><noinclude>{{documentation}}[[Category:Ddl Template]]</noinclude>
