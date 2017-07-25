@@ -93,22 +93,31 @@ end
 
 -- 按照更新日期、作者或译者列出Mod（卡片样式）
 function Utility.modWrapper(frame)
-    local category = frame and frame.args[1] or '更新日期'
-    local name = frame and frame.args[2] or ''
-    local filter = '[[' .. category .. '::~*"' .. name .. '"*]]'
-    local sort, order
-    local limit = 300
+    local category, name, filter, sort, order, limit
+
+    if frame == nil or frame.args == nil or frame.args[1] == nil or frame.args[1] == '' then
+        category = '更新日期'
+    else
+        category = frame.args[1]
+    end
+    
     if category == '更新日期' then
         filter = '[[更新日期::+]]'
         sort = '更新日期,Modification date'
         order = 'desc,desc'
         limit = 15
     elseif category == '作者' then
+        name = frame.args[2]
+        filter = '[[' .. category .. '::~*"' .. name .. '"*]]'
         sort = '适配版本,英文名'
         order = 'desc,asc'
+        limit = 300
     elseif category == '译者' then
+        name = frame.args[2]
+        filter = '[[' .. category .. '::~*"' .. name .. '"*]]'
         sort = '适配版本,作者,英文名'
         order = 'desc,asc,asc'
+        limit = 300
     end
 
     local queryResult = mw.smw.ask({
@@ -131,7 +140,7 @@ function Utility.modWrapper(frame)
         limit = limit
     })
 
-    local text = ''
+    local text = '<!--' .. filter .. '-->\n'
     for i, mod in pairs(queryResult) do
         text = text .. modCard(mod)
     end
